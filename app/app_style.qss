@@ -1,0 +1,173 @@
+
+/* Modern clean QSS for Instant Document Summarizer & Search - 2025 Bengali/Responsive/Autocomplete */
+
+/* Window background and base font, Bengali fallback */
+QWidget {
+  background-color: #f7f8fa;
+  color: #1f2937;
+  font-family: "Segoe UI", "Noto Sans Bengali", "SolaimanLipi", "Vrinda", "Roboto", "Helvetica", Arial, sans-serif;
+  font-size: 11pt;
+}
+
+
+/* Dark Mode Support (unchanged) */
+[darkMode="true"] QWidget {
+  background-color: #1f2937;
+  color: #f7f8fa;
+}
+[darkMode="true"] QPushButton {
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4b5563, stop:1 #374151);
+  color: #f7f8fa;
+}
+[darkMode="true"] QPushButton:hover {
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #6b7280, stop:1 #4b5563);
+}
+[darkMode="true"] QLineEdit, [darkMode="true"] QTextEdit, [darkMode="true"] QListWidget {
+  background: #374151;
+  border: 1px solid #4b5563;
+  color: #f7f8fa;
+}
+[darkMode="true"] QLineEdit:focus, [darkMode="true"] QTextEdit:focus {
+  border: 1px solid #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.08);
+}
+[darkMode="true"] QListWidget::item:selected {
+  background-color: #4b5563;
+  color: #f7f8fa;
+}
+
+/* Modern input fields, Bengali placeholder, and autocomplete */
+QLineEdit, QTextEdit {
+  background: #fff;
+  color: #1f2937;
+  border: 1.5px solid #444;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 1.08em;
+  font-family: "Segoe UI", "Noto Sans Bengali", "SolaimanLipi", "Vrinda", "Roboto", "Helvetica", Arial, sans-serif;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+QLineEdit:focus, QTextEdit:focus {
+  border: 2px solid #0078d7;
+  box-shadow: 0 0 8px #0078d7aa;
+}
+QLineEdit[placeholderText], QTextEdit[placeholderText] {
+  color: #b0b0b0;
+  font-family: "Noto Sans Bengali", "SolaimanLipi", "Vrinda", "Segoe UI", sans-serif;
+  font-style: italic;
+}
+
+QPushButton {
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3a3f4b, stop:1 #23272e);
+  color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 1.05em;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+QPushButton:hover {
+  background: #0078d7;
+  color: #fff;
+  box-shadow: 0 2px 8px #0078d7aa;
+}
+QPushButton:pressed {
+  background: #005fa3;
+}
+
+/* Autocomplete dropdown (QListView/QCompleter) */
+QListView, QCompleter QAbstractItemView {
+  background: #23272e;
+  color: #f0f0f0;
+  border: 1.5px solid #0078d7;
+  border-radius: 8px;
+  font-family: "Noto Sans Bengali", "SolaimanLipi", "Vrinda", "Segoe UI", sans-serif;
+  font-size: 1.05em;
+  selection-background-color: #0078d7;
+  selection-color: #fff;
+}
+
+/* Responsive adaptation: For small screens, adjust in Python using setStyleSheet with variables */
+/* Example: set font-size, padding, border-radius dynamically in main_window.py based on window size */
+
+/* Header label */
+QLabel#headerTitle {
+  font-size: 14pt;
+  font-weight: 600;
+  color: #111827;
+}
+
+[darkMode="true"] QLabel#headerTitle {
+  color: #f7f8fa; /* Light header in dark mode */
+}
+
+/* Buttons */
+QPushButton {
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3b82f6, stop:1 #1e40af);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: none;
+}
+QPushButton:hover {
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #60a5fa, stop:1 #2563eb);
+}
+QPushButton:disabled {
+  background-color: #93c5fd;
+  color: #e6eefc;
+}
+
+/* Inputs */
+QLineEdit, QTextEdit, QListWidget {
+  background: white;
+  border: 1px solid #e6e9ef;
+  border-radius: 6px;
+  padding: 8px;
+  min-width: 200px; /* Minimum width for responsiveness */
+  max-width: 100%; /* Prevent overflow */
+}
+QLineEdit:focus, QTextEdit:focus {
+  border: 1px solid #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.08);
+}
+
+/* Results list - Responsive adjustments */
+QListWidget::item {
+  padding: 10px;
+  border-bottom: 1px solid #f1f5f9;
+  word-wrap: break-word; /* Wrap long text */
+  min-height: 50px; /* Minimum item height */
+}
+QListWidget::item:selected {
+  background-color: #eef2ff;
+  color: #0f172a;
+}
+
+/* Status label */
+QLabel#statusLabel {
+  color: #6b7280;
+  font-size: 9pt;
+}
+
+/* Misc tweaks - Responsive scrollbar */
+QScrollBar:vertical {
+  width: 10px;
+  background: transparent;
+}
+QScrollBar::handle:vertical {
+  background: #cbd5e1;
+  border-radius: 5px;
+  min-height: 20px; /* Responsive handle size */
+}
+
+/* Make placeholder text subtle */
+QLineEdit[placeholderText] {
+  color: #9ca3af;
+}
+
+/* Responsive for smaller screens - Use dynamic properties if needed, but QSS doesn't support media queries directly */
+QWidget[screenSize="small"] QListWidget, QWidget[screenSize="small"] QTextEdit {
+  font-size: 10pt; /* Smaller font on small screens */
+  padding: 4px; /* Reduced padding */
+}

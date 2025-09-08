@@ -1,0 +1,256 @@
+/* 2025 Modern/Responsive, Bengali font fallback, and autocomplete styles with enhanced visuals */
+QMainWindow, QWidget {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', Arial, sans-serif;
+    font-size: 14px;
+}
+
+QLabel {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3a3f4b, stop:1 #23272e);
+    color: #f0f0f0;
+    border: none;
+    border-radius: 12px;  /* Larger radius for modern look */
+    padding: 12px 24px;   /* Larger padding */
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #0078d7, stop:1 #005fa3);
+    color: #fff;
+    box-shadow: 0 4px 12px #0078d7aa;
+    transform: scale(1.05);
+}
+
+QPushButton:pressed {
+    background: #005fa3;
+    transform: scale(0.95);
+}
+
+QLineEdit, QTextEdit {
+    background: #fff;
+    color: #1f2937;
+    border: 1.5px solid #444;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 1.1em;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #0078d7;
+    box-shadow: 0 0 12px #0078d7aa;
+}
+
+QListView, QCompleter QAbstractItemView {
+    background: #23272e;
+    color: #f0f0f0;
+    border: 1.5px solid #0078d7;
+    border-radius: 12px;
+    font-size: 1.1em;
+    selection-background-color: #0078d7;
+    selection-color: #fff;
+}
+
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+
+/* Larger result area */
+ResultWidget {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+    min-height: 200px;  /* Larger min height */
+}
+
+/* Dark mode */
+[darkMode="true"] QMainWindow, [darkMode="true"] QWidget {
+    background-color: #0f1720;
+    color: #e6eef8;
+}
+
+[darkMode="true"] QLabel {
+    color: #e6eef8;
+}
+
+[darkMode="true"] QPushButton {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+[darkMode="true"] QPushButton:hover {
+    background-color: #1e40af;
+}
+
+[darkMode="true"] QLineEdit, [darkMode="true"] QTextEdit {
+    background-color: #0b1220;
+    border: 1px solid #1f2937;
+    color: #e6eef8;
+}
+
+[darkMode="true"] QListWidget {
+    background-color: #071022;
+    color: #e6eef8;
+}
+
+[darkMode="true"] QListWidget::item:selected {
+    background-color: #12324a;
+}
+
+/* 2025 Modern/Responsive, Bengali font fallback, and autocomplete styles */
+QMainWindow, QWidget {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', Arial, sans-serif;
+}
+
+
+QLabel {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', Arial, sans-serif;
+}
+
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3a3f4b, stop:1 #23272e);
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: background 0.2s, box-shadow 0.2s;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', Arial, sans-serif;
+}
+QPushButton:hover {
+    background: #0078d7;
+    color: #fff;
+    box-shadow: 0 2px 8px #0078d7aa;
+}
+QPushButton:pressed {
+    background: #005fa3;
+}
+
+QLineEdit, QTextEdit {
+    background: #fff;
+    color: #1f2937;
+    border: 1.5px solid #444;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 1.08em;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', Arial, sans-serif;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #0078d7;
+    box-shadow: 0 0 8px #0078d7aa;
+}
+QLineEdit[placeholderText], QTextEdit[placeholderText] {
+    color: #b0b0b0;
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', 'Segoe UI', sans-serif;
+    font-style: italic;
+}
+
+QListView, QCompleter QAbstractItemView {
+    background: #23272e;
+    color: #f0f0f0;
+    border: 1.5px solid #0078d7;
+    border-radius: 8px;
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', 'Segoe UI', sans-serif;
+    font-size: 1.05em;
+    selection-background-color: #0078d7;
+    selection-color: #fff;
+}
+
+/* Responsive adaptation: For small screens, adjust in Python using setStyleSheet with variables */
+/* Example: set font-size, padding, border-radius dynamically in main_window.py based on window size */
+}
+
+QListWidget {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+QListWidget::item {
+    padding: 8px;
+}
+
+QListWidget::item:selected {
+    background-color: #e6f0fa;
+    color: #333333;
+}
+
+QProgressBar {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+
+QProgressBar::chunk {
+    background-color: #0078d4;
+    border-radius: 3px;
+}
+
+/* Custom styles for FileUploadWidget */
+FileUploadWidget {
+    border: 2px dashed #cccccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+FileUploadWidget:hover {
+    border-color: #0078d4;
+}
+
+/* Custom styles for ResultWidget */
+ResultWidget {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+/* Dark mode support - toggle by setting attribute on root widget or by loading this stylesheet variant */
+/* Usage hint: set a property on QApplication or main window: main_window.setProperty('darkMode', True) */
+[darkMode="true"] QMainWindow, [darkMode="true"] QWidget {
+    background-color: #0f1720;
+    color: #e6eef8;
+}
+
+[darkMode="true"] QLabel {
+    color: #e6eef8;
+}
+
+[darkMode="true"] QPushButton {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+[darkMode="true"] QPushButton:hover {
+    background-color: #1e40af;
+}
+
+[darkMode="true"] QLineEdit, [darkMode="true"] QTextEdit {
+    background-color: #0b1220;
+    border: 1px solid #1f2937;
+    color: #e6eef8;
+}
+
+[darkMode="true"] QListWidget {
+    background-color: #071022;
+    color: #e6eef8;
+}
+
+[darkMode="true"] QListWidget::item:selected {
+    background-color: #12324a;
+}
